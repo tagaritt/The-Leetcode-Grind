@@ -30,6 +30,7 @@ class TreeNode(object):
     self.left = left
     self.right = right
 
+### LeetCode Implementation ###
 class Solution(object):
   def checkTree(self, root: Optional[TreeNode]) -> bool:
     """
@@ -37,3 +38,17 @@ class Solution(object):
     :rtype: bool
     """
     return (root.val == root.left.val + root.right.val)
+
+### Actual Implementation ###
+class Solution(object):
+    def checkTree(self, root: TreeNode) -> bool:
+        """
+        :type root: Optional[TreeNode]
+        :rtype: bool
+        """
+        return (root.val == root.left + root.right)
+
+# 'XX' can be any integer value
+root = TreeNode(val = XX, left = XX, right = XX)
+
+print(Solution().checkTree(root))
